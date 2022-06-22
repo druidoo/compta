@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+
+     <record model="ir.ui.view" id="view_project_kanban_meritis">
+            <field name="name">project.project.kanban.meritis</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban"/>
+            <field name="arch" type="xml">
+              <xpath expr="/kanban" position="attributes">
+                <attribute name="js_class">project_project_kanban_meritis</attribute>
+              </xpath>
+            </field>
+     </record>
+
+
+    <record id="project_project_edit_project1" model="ir.ui.view">
+            <field name="name">project.project.view.form.edit_project1</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <field name="description" position="before">
+                     <field name="order_line" widget="one2many_list" store="True">
+                      <tree editable="bottom">
+                        <field name='product_id'/>
+                        <field name='company_id'/>
+                      </tree>
+                    </field>
+                </field>
+            </field>
+        </record>
+
+    <record id="project_project_view_form_simplified_inherit_timesheet1" model="ir.ui.view">
+            <field name="name">project.project.view.form.simplified.inherit.timesheet1</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+            <field name="priority">25</field>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="partner_id"/>
+                </field>
+
+            </field>
+        </record>
+<!--
+    <menuitem name="Menu 1" id="meritis_account.menu_1" parent="meritis_account.menu_root"/>
+    <menuitem name="Menu 2" id="meritis_account.menu_2" parent="meritis_account.menu_root"/>
+-->
+
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="meritis_account.menu_1_list" parent="meritis_account.menu_1"
+              action="meritis_account.action_window"/>
+    <menuitem name="Server to list" id="meritis_account" parent="meritis_account.menu_2"
+              action="meritis_account.action_server"/>
+-->
+  </data>
+</odoo>
