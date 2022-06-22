@@ -18,13 +18,17 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
+                <xpath expr="/form" position="attributes">
+                  <attribute name="create">0</attribute>
+                </xpath>
+
                 <field name="tag_ids" position="after">
                   <field name="amount"/>
                 </field>
 
                 <field name="description" position="before">
                   <field name="order_state" invisible="1"/>
-                  <button type="object" name="confirm_sale_line"  class="btn btn-primary" string="Rafraichir"  icon="fa-refresh"/>
+                  <button type="object" name="confirm_sale_line"  class="btn btn-primary" string="Confimer lignes"  icon="fa-refresh"/>
                      <field name="order_line" widget="one2many_list" store="True">
                       <tree editable="bottom">
                         <control>
@@ -67,6 +71,18 @@
                       </tree>
                     </field>
                 </field>
+
+                <xpath expr="//page[@name='settings']" position="before">
+                  <page name="condition" string="Condition">
+                    <field name="employee_condition">
+                      <tree editable="top">
+                        <field name="employee_id" string="Employé"/>
+                        <field name="type"/>
+                        <field name="amount"/>
+                      </tree>
+                    </field>
+                  </page>
+                </xpath>
             </field>
         </record>
 
@@ -82,6 +98,19 @@
 
             </field>
         </record>
+
+    <record id="project_project_view_form_simplified_footer1" model="ir.ui.view">
+            <field name="name">pproject_project_view_form_simplified_footer1</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.project_project_view_form_simplified_footer"/>
+            <field name="arch" type="xml">
+               <xpath expr="//button[@name='action_view_tasks']" position="replace">
+                 <button string="Creer" name="action_view_project" type="object" class="btn-primary" data-hotkey="q"/>
+               </xpath>
+            </field>
+        </record>
+
+
 <!--
     <menuitem name="Menu 1" id="meritis_account.menu_1" parent="meritis_account.menu_root"/>
     <menuitem name="Menu 2" id="meritis_account.menu_2" parent="meritis_account.menu_root"/>
