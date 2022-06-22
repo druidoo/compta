@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* meritis_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 14:39+0000\n"
+"PO-Revision-Date: 2022-06-22 14:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: meritis_project
+#: model:ir.model.fields.selection,name:meritis_project.selection__project_project__type__atg
+msgid "ATG"
+msgstr ""
+
+#. module: meritis_project
+#: model:ir.model.fields.selection,name:meritis_project.selection__project_project__type__atu
+msgid "ATU"
+msgstr ""
+
+#. module: meritis_project
+#: model:ir.model.fields,field_description:meritis_project.field_project_project__account_manager_id
+msgid "Account manager"
+msgstr ""
+
+#. module: meritis_project
+#: model:ir.model.fields.selection,name:meritis_project.selection__project_project__type__package
+msgid "Package"
+msgstr "Forfait"
+
+#. module: meritis_project
+#: model:ir.model,name:meritis_project.model_project_project
+msgid "Project"
+msgstr "Projet"
+
+#. module: meritis_project
+#: model:ir.model.fields,field_description:meritis_project.field_project_project__project_manager_id
+msgid "Project manager"
+msgstr "Chef de projet"
+
+#. module: meritis_project
+#: model:ir.model.fields,field_description:meritis_project.field_project_project__type
+msgid "Type"
+msgstr ""

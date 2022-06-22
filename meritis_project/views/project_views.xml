@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="project_project_form" model="ir.ui.view">
+			<field name="name">project.project.form</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id" ref="project.edit_project"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="account_manager_id" widget="many2one_avatar_user" attrs="{'readonly':[('active','=',False)]}"
+					       domain="[('share', '=', False)]"/>
+					<field name="project_manager_id" widget="many2one_avatar_user" attrs="{'readonly':[('active','=',False)]}"
+					       domain="[('share', '=', False)]"/>
+				
+				</xpath>
+				<xpath expr="//field[@name='tag_ids']" position="before">
+					<field name="type"/>
+				</xpath>
+				<xpath expr="//button[@name='%(project.project_milestone_all)d']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//button[@name='%(project.act_project_project_2_project_task_all)d']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//button[@name='%(project.action_project_task_burndown_chart_report)d']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

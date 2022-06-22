@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "meritis_account",
+    'name': "Meritis Account",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'web_studio','sale_timesheet', 'analytic', 'project'],
+    'depends': ['base', 'web_studio','sale_timesheet', 'analytic', 'project', 'meritis_base'],
 
     # always loaded
     'data': [
