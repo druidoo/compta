@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* meritis_project_account_budget
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-22 14:40+0000\n"
+"PO-Revision-Date: 2022-06-22 14:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: meritis_project_account_budget
+#: model_terms:ir.ui.view,arch_db:meritis_project_account_budget.project_project_form
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"\t\t\t\t\t\t\t\tInvoiced\n"
+"\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"\t\t\t\t\t\t\t\tFacturé\n"
+"\t\t\t\t\t\t\t</span>"
+
+#. module: meritis_project_account_budget
+#: model_terms:ir.ui.view,arch_db:meritis_project_account_budget.project_project_form
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"\t\t\t\t\t\t\t\tUninvoiced\n"
+"\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"\t\t\t\t\t\t\t\tFacturable\n"
+"\t\t\t\t\t\t\t</span>"
+
+#. module: meritis_project_account_budget
+#: model_terms:ir.ui.view,arch_db:meritis_project_account_budget.project_project_form
+msgid "Invoiced"
+msgstr "Facturé"
+
+#. module: meritis_project_account_budget
+#: model:ir.model.fields,field_description:meritis_project_account_budget.field_project_project__invoiced_analytics_amount
+msgid "Invoiced analytics"
+msgstr "Facturé"
+
+#. module: meritis_project_account_budget
+#: model:ir.model,name:meritis_project_account_budget.model_project_project
+msgid "Project"
+msgstr "Projet"
+
+#. module: meritis_project_account_budget
+#: model_terms:ir.ui.view,arch_db:meritis_project_account_budget.project_project_form
+msgid "Uninvoiced"
+msgstr "Facturable"
+
+#. module: meritis_project_account_budget
+#: model:ir.model.fields,field_description:meritis_project_account_budget.field_project_project__uninvoiced_analytics_amount
+msgid "Uninvoiced analytics"
+msgstr "Facturable"
