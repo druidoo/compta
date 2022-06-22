@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_meritis_account_meritis_account,meritis_account.meritis_account,model_meritis_account_meritis_account,base.group_user,1,1,1,1
