@@ -28,10 +28,6 @@
         'views/views.xml',
         'views/templates.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
     'assets': {
             'web.assets_backend': [
                 'meritis_account/static/src/js/**/*',
