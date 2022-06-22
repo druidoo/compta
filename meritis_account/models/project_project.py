@@ -12,6 +12,12 @@ class ProjectEmployeeCond(models.Model):
     amount = fields.Monetary('Montant', currency_field='currency_id')
 
 
+class ProjectProject(models.Model):
+    _inherit = 'project.sale.line.employee.map'
+
+    currency_id = fields.Many2one('res.currency', related='employee_id.currency_id')
+    re_invoice_amount = fields.Monetary('Refacturation', currency_field='currency_id')
+
 
 class ProjectProject(models.Model):
     _inherit = 'project.project'
