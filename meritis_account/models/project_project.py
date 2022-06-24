@@ -43,8 +43,12 @@ class ProjectProject(models.Model):
         project_id.write({'order_id': sale_order_id.id})
         return project_id
 
-    def confirm_sale_line(self):
-        self.order_id.action_confirm()
+    def write(self, vals):
+        res = super(ProjectProject, self).write(vals)
+        if vals.get('order_line') and self.order_id:
+            self.order_id.action_confirm()
+        return res
+
 
     def action_view_project(self):
         view_id = self.env.ref('project.edit_project').id
