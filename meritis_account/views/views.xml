@@ -73,10 +73,10 @@
                 </field>
 
                 <xpath expr="//page[@name='settings']" position="before">
-                  <page name="condition" string="Condition">
+                  <page name="condition" string="Conditions">
                     <field name="employee_condition">
                       <tree editable="top">
-                        <field name="employee_id" string="Employé"/>
+                        <field name="employee_id" string="Consultants"/>
                         <field name="type"/>
                         <field name="amount"/>
                       </tree>
