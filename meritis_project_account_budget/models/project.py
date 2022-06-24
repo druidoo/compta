@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 
 class ProjectProject(models.Model):
@@ -18,7 +18,8 @@ class ProjectProject(models.Model):
                                             'amount'],
                                            ['account_id'])
         uninvoiced = AnalyticLine.read_group([('timesheet_invoice_id', '=', False), ('account_id', '=',
-                                                                                     self.analytic_account_id.id)],
+                                                                                     self.analytic_account_id.id),
+                                              ('move_id', '=', False)],
                                              ['account_id',
                                               'amount'],
                                              ['account_id'])
@@ -28,11 +29,14 @@ class ProjectProject(models.Model):
     def action_open_invoiced_analytic(self):
         self.ensure_one()
         action = self.action_view_analytic_account_entries()
+        action['name'] = _('Invoiced')
         action['domain'] = [('account_id', '=', self.analytic_account_id.id), ('timesheet_invoice_id', '!=', False)]
         return action
 
     def action_open_uninvoiced_analytic(self):
         self.ensure_one()
         action = self.action_view_analytic_account_entries()
-        action['domain'] = [('account_id', '=', self.analytic_account_id.id), ('timesheet_invoice_id', '=', False)]
+        action['name'] = _('Uninvoiced')
+        action['domain'] = [('account_id', '=', self.analytic_account_id.id), ('timesheet_invoice_id', '=', False),
+                            ('move_id', '=', False)]
         return action

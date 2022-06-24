@@ -17,13 +17,13 @@
 					<field name="type"/>
 				</xpath>
 				<xpath expr="//button[@name='%(project.project_milestone_all)d']" position="attributes">
-					<attribute name="invisible">1</attribute>
+					<attribute name="attrs">{'invisible': [('type', '!=', 'package')]}</attribute>
 				</xpath>
 				<xpath expr="//button[@name='%(project.act_project_project_2_project_task_all)d']" position="attributes">
-					<attribute name="invisible">1</attribute>
+					<attribute name="attrs">{'invisible': [('type', '!=', 'package')]}</attribute>
 				</xpath>
 				<xpath expr="//button[@name='%(project.action_project_task_burndown_chart_report)d']" position="attributes">
-					<attribute name="invisible">1</attribute>
+					<attribute name="attrs">{'invisible': [('type', '!=', 'package')]}</attribute>
 				</xpath>
 			</field>
 		</record>
