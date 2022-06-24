@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		<record id="project_project_form" model="ir.ui.view">
+		<record id="project_project_form_budget" model="ir.ui.view">
 			<field name="name">project.project.form</field>
 			<field name="model">project.project</field>
 			<field name="inherit_id" ref="project_account_budget.project_project_form_view_inherited"/>
 			<field name="arch" type="xml">
 				<xpath expr="//button[@name='action_view_budget_lines']" position="attributes">
-					<attribute name="invisible">1</attribute>
+					<attribute name="attrs">{'invisible': ['|', ('analytic_account_id', '=', False), ('type', '!=', 'package')
+						]}</attribute>
 				</xpath>
 			</field>
 		</record>

@@ -28,7 +28,7 @@
 
                 <field name="description" position="before">
                   <field name="order_state" invisible="1"/>
-                  <button type="object" name="confirm_sale_line"  class="btn btn-primary" string="Confimer lignes"  icon="fa-refresh"/>
+                  <!--<button type="object" name="confirm_sale_line"  class="btn btn-primary" string="Confimer lignes"  icon="fa-refresh"/>-->
                      <field name="order_line" widget="one2many_list" store="True">
                       <tree editable="bottom">
                         <control>
